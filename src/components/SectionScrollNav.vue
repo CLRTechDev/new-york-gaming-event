@@ -1,16 +1,16 @@
 <template>
   <nav class="scroll-nav" :class="{ 'is-visible': isVisible }" aria-label="Section quick navigation">
     <a href="#top" class="logo-pill" aria-label="Back to top">
-      <img class="logo-image" src="/artham.png" alt="ARTHAM" />
+      <img class="logo-image" src="/flag-haiti.svg" alt="We Are One" />
     </a>
-    <a href="#tickets" class="nav-pill">Program</a>
-    <a href="#lineup" class="nav-pill">Lineup</a>
-    <a href="#lineup" class="nav-pill nav-pill-muted">
-      Leadership Events
+    <a href="#tickets" class="nav-pill">Schedule</a>
+    <a href="#lineup" class="nav-pill">About</a>
+    <a href="#speakers" class="nav-pill nav-pill-muted">
+      Experience Zones
       <span class="badge-new">NEW</span>
     </a>
-    <a href="#lineup" class="nav-pill">Partners</a>
-    <a href="https://ti.to/ae-events/ae-conference/with/conference-pass" class="nav-pill nav-pill-cta">Tickets</a>
+    <a href="#sponsors" class="nav-pill">Sponsors</a>
+    <a href="#sponsors" class="nav-pill nav-pill-cta">Become a Sponsor</a>
   </nav>
 </template>
 
@@ -101,12 +101,13 @@ onBeforeUnmount(() => {
   display: grid;
   place-items: center;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
 }
 
 .logo-image {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
   display: block;
 }
 
@@ -121,13 +122,13 @@ onBeforeUnmount(() => {
   line-height: 1;
   padding: 0.2rem 0.34rem;
   border-radius: 999px;
-  background: #7e47d3;
+  background: #ce1126;
   color: #fff;
 }
 
 .nav-pill-cta {
   margin-left: auto;
-  background: #ff4d10;
+  background: #003580;
   color: #fff;
 }
 

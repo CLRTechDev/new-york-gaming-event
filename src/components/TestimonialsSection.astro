@@ -1,62 +1,62 @@
 ---
-const testimonials = [
+const statements = [
   {
-    name: 'Victor C.',
-    role: 'Head of Design',
-    photo: 'https://randomuser.me/api/portraits/men/32.jpg',
+    name: 'Cultural Platform',
+    role: 'Event Mission',
+    photo: 'https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&fit=crop&w=68&h=68&q=80',
     quote:
-      'Hands down, the best design conference in Europe. From the speakers to the round-table discussions and networking, we left Berlin feeling more inspired and motivated than ever to get serious work done!',
+      'This event is more than a festival. It is a platform to celebrate Haitian excellence and identity, honor freedom during Juneteenth weekend, and establish a culturally significant annual event in Atlanta.',
   },
   {
-    name: 'Kim G.',
-    role: 'Design Director',
-    photo: 'https://randomuser.me/api/portraits/women/76.jpg',
+    name: 'Sponsor Opportunity',
+    role: 'Brand Partnership',
+    photo: 'https://images.pexels.com/photos/1684187/pexels-photo-1684187.jpeg?auto=compress&fit=crop&w=68&h=68&q=80',
     quote:
-      'ARTHAM struck the right balance of inspiring and practical. I met great people and walked away motivated to explore, play and dig deeper into the potential of my own role.',
+      'The weekend offers a strong platform for multicultural audience engagement, family-centered community reach, premium VIP access, experiential brand activations, and high-visibility media moments.',
   },
   {
-    name: 'Andre G.',
-    role: 'Principal UI Designer',
-    photo: 'https://randomuser.me/api/portraits/men/58.jpg',
+    name: 'Community Impact',
+    role: 'Saturday Festival',
+    photo: 'https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&fit=crop&w=68&h=68&q=80',
     quote:
-      'This was my second year attending ARTHAM and it did not disappoint. The workshops are very hands-on and valuable and the panels are equally fantastic.',
+      'Saturday is the public-facing flagship experience — vibrant, energetic, family-friendly, and highly visual. Designed for approximately 5,000 attendees, it operates like a destination event for the whole weekend.',
   },
   {
-    name: 'Solveig S.',
-    role: 'Lead Product Designer',
-    photo: 'https://randomuser.me/api/portraits/women/65.jpg',
+    name: 'Friday Prestige',
+    role: 'Unity Gala',
+    photo: 'https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&fit=crop&w=68&h=68&q=80',
     quote:
-      'One of the top-notch conferences right now focused on where strategic design is heading and a great place to network and meet smart, inspiring people from across Europe.',
+      'Friday is the elevated opening experience — red carpet, stylish, curated, culturally rich, and press-worthy. Its job is to welcome sponsors and invited guests and frame the weekend with meaning.',
   },
   {
-    name: 'Aleksandra A.',
-    role: 'UX/UI Designer',
-    photo: 'https://randomuser.me/api/portraits/women/33.jpg',
+    name: 'Haitian Pride',
+    role: 'Cultural Identity',
+    photo: 'https://images.pexels.com/photos/2078076/pexels-photo-2078076.jpeg?auto=compress&fit=crop&w=68&h=68&q=80',
     quote:
-      'Talks that really challenge your thinking and workshops that actually give you practical methods to experiment with. A perfect opportunity to exchange with peers in a meaningful way.',
+      'The experience brings people together through Haitian pride, cultural celebration, music, food, family, and global connection through football — polished enough for sponsors, joyful enough for everyone.',
   },
   {
-    name: 'Joana H.',
-    role: 'Senior Designer',
-    photo: 'https://randomuser.me/api/portraits/women/12.jpg',
+    name: 'Long-Term Vision',
+    role: 'Annual Event',
+    photo: 'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&fit=crop&w=68&h=68&q=80',
     quote:
-      'I attended online from abroad and still felt the energy. I now feel refreshed and full of inspiration and positivity for the year ahead.',
+      'This event should feel like a movement in celebration form. Friday establishes prestige. Saturday delivers the public celebration. Together, they create a signature weekend with strong community meaning and long-term growth potential.',
   },
 ];
 
-const topRow = testimonials.slice(0, 3);
-const bottomRow = testimonials.slice(3);
+const topRow = statements.slice(0, 3);
+const bottomRow = statements.slice(3);
 ---
 
 <section class="testimonials-section" aria-labelledby="testimonials-title">
   <div class="testimonials-wrap">
-    <h2 id="testimonials-title" class="testimonials-title">What 2025's participants said</h2>
+    <h2 id="testimonials-title" class="testimonials-title">Why We Are One Matters</h2>
 
     <div class="marquee-row">
       <div class="marquee-track marquee-track-forward">
         {[...topRow, ...topRow].map((item) => (
           <article class="testimonial-card">
-            <p class="quote-mark" aria-hidden="true">“</p>
+            <p class="quote-mark" aria-hidden="true">"</p>
             <p class="quote">{item.quote}</p>
 
             <div class="person-row">
@@ -75,7 +75,7 @@ const bottomRow = testimonials.slice(3);
       <div class="marquee-track marquee-track-reverse">
         {[...bottomRow, ...bottomRow].map((item) => (
           <article class="testimonial-card">
-            <p class="quote-mark" aria-hidden="true">“</p>
+            <p class="quote-mark" aria-hidden="true">"</p>
             <p class="quote">{item.quote}</p>
 
             <div class="person-row">
@@ -170,7 +170,7 @@ const bottomRow = testimonials.slice(3);
 
 .quote-mark {
   margin: 0;
-  color: #3f56f2;
+  color: #003580;
   font-size: 2.8rem;
   line-height: 1;
   font-family: Georgia, "Times New Roman", serif;
@@ -211,13 +211,8 @@ const bottomRow = testimonials.slice(3);
 }
 
 @keyframes testimonials-left {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(-50% - 0.45rem));
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 0.45rem)); }
 }
 
 @media (max-width: 720px) {

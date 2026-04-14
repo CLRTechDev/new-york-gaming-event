@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import docx; print\\('docx ok'\\)\")",
+      "Bash(python -c \"import openpyxl; print\\('openpyxl ok'\\)\")",
+      "Bash(python:*)",
+      "Bash(cp \"/c/Users/robin/Documents/1. Projects/we-are-one-world-cup/Flag_of_Haiti.svg\" \"/c/Users/robin/Documents/1. Projects/we-are-one-world-cup/public/flag-haiti.svg\")",
+      "Bash(cp \"/c/Users/robin/Documents/1. Projects/we-are-one-world-cup/US_Flag_Color_72DPI_750x450.jpg\" \"/c/Users/robin/Documents/1. Projects/we-are-one-world-cup/public/flag-us.jpg\")"
+    ]
+  }
+}

@@ -5,19 +5,22 @@
     <div class="hero-grid-atmosphere" ref="gridOverlayRef" aria-hidden="true"></div>
 
     <div class="hero-top container" ref="heroTopRef">
-      <img class="hero-logo" src="/artham.png" alt="ARTHAM logo" />
-      <p class="hero-date">Sep 16 - 18, 2026 · Berlin & Online</p>
-      <h1 class="hero-title" ref="titleRef">ARTHAM AI<br />Summit</h1>
-      <p class="hero-copy">The premier gathering for AI product, engineering, and design leaders in Europe. 550 onsite spots. Applications open now.</p>
+      <div class="hero-flags" aria-hidden="true">
+        <img src="/flag-haiti.svg" alt="Haiti flag" class="flag-icon" />
+        <img src="/flag-us.jpg" alt="US flag" class="flag-icon" />
+      </div>
+      <p class="hero-date">Juneteenth Weekend · June 2026 · Atlanta, GA</p>
+      <h1 class="hero-title" ref="titleRef">We Are One:<br />Haiti World Cup<br />Weekend</h1>
+      <p class="hero-copy">Celebrating Haiti. Honoring freedom. Uniting cultures. A two-day signature cultural experience for families, leaders, and community.</p>
 
       <div class="hero-actions" ref="actionsRef">
-        <a href="/invite" class="cta cta-primary">
-          <span>Apply for an Invite</span>
+        <a href="#sponsors" class="cta cta-primary">
+          <span>Become a Sponsor</span>
           <svg class="cta-icon cta-icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
             <path d="M3 8h8M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
           </svg>
         </a>
-        <a href="/invite" class="cta cta-dark">
+        <a href="#tickets" class="cta cta-dark">
           <span>Get Tickets</span>
           <svg class="cta-icon cta-icon-ticket" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
             <path d="M2.5 6.2a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v1.1a1.25 1.25 0 0 0 0 2.5V11a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1V9.8a1.25 1.25 0 0 0 0-2.5V6.2Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
@@ -26,29 +29,28 @@
         </a>
       </div>
 
-      <p class="hero-subcopy">1,500+ people have already applied to join the 2026 AI Summit</p>
+      <p class="hero-subcopy">5,000+ attendees expected · Two days of culture, music, food &amp; community</p>
 
-      <div class="support-row" aria-label="Supporting brands">
-        <span class="support-label">Trusted by AI-first teams at</span>
+      <div class="support-row" aria-label="Experience zones">
+        <span class="support-label">Featuring</span>
         <div class="support-logos">
-          <span>UserTesting</span>
-          <span>Figma</span>
-          <span>Intercom</span>
-          <span>Mobbin</span>
-          <span>Superhuman</span>
-          <span>GetYourGuide</span>
+          <span>Unity Stage</span>
+          <span>Food Fest</span>
+          <span>Kids Zone</span>
+          <span>Marketplace</span>
+          <span>VIP Lounge</span>
         </div>
       </div>
     </div>
 
-    <div class="hero-marquee" aria-label="AI summit moments">
+    <div class="hero-marquee" aria-label="Event moments">
       <svg class="marquee-curve" viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation" aria-hidden="true">
         <path d="M0,0 L0,46 C320,108 1120,108 1440,46 L1440,0 Z"></path>
       </svg>
       <div class="marquee-track">
-        <img v-for="img in marqueeImages" :key="`a-${img}`" :src="img" alt="AI summit speaker" loading="lazy" />
-        <img v-for="img in marqueeImages" :key="`b-${img}`" :src="img" alt="AI summit speaker" loading="lazy" />
-        <img v-for="img in marqueeImages" :key="`c-${img}`" :src="img" alt="AI summit speaker" loading="lazy" />
+        <img v-for="img in marqueeImages" :key="`a-${img}`" :src="img" alt="Event moment" loading="lazy" />
+        <img v-for="img in marqueeImages" :key="`b-${img}`" :src="img" alt="Event moment" loading="lazy" />
+        <img v-for="img in marqueeImages" :key="`c-${img}`" :src="img" alt="Event moment" loading="lazy" />
       </div>
       <svg class="marquee-curve-bottom" viewBox="0 0 1440 220" preserveAspectRatio="none" role="presentation" aria-hidden="true">
         <path d="M0,220 L0,174 C320,112 1120,112 1440,174 L1440,220 Z"></path>
@@ -68,17 +70,17 @@ const actionsRef = ref(null);
 const gridOverlayRef = ref(null);
 
 const marqueeImages = [
-  'https://images.pexels.com/photos/18999161/pexels-photo-18999161.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/9275222/pexels-photo-9275222.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/34594518/pexels-photo-34594518.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/34046711/pexels-photo-34046711.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/27692367/pexels-photo-27692367.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/1684187/pexels-photo-1684187.jpeg?auto=compress&cs=tinysrgb&w=1200',
   'https://images.pexels.com/photos/3321796/pexels-photo-3321796.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/29284293/pexels-photo-29284293.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/34086480/pexels-photo-34086480.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/29708260/pexels-photo-29708260.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/10401279/pexels-photo-10401279.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/33121483/pexels-photo-33121483.jpeg?auto=compress&cs=tinysrgb&w=1200'
+  'https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/2078076/pexels-photo-2078076.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1200',
 ];
 
 onMounted(() => {
@@ -99,7 +101,6 @@ onMounted(() => {
   if (heroRef.value && gridOverlayRef.value) {
     const updateGridShift = () => {
       const y = window.scrollY;
-      // Keep movement tiny so the grid reads as atmosphere only.
       const offsetX = (y * 0.04) % 8;
       const offsetY = (y * 0.03) % 6;
       gridOverlayRef.value.style.transform = `translate3d(${offsetX.toFixed(2)}px, ${offsetY.toFixed(2)}px, 0)`;
@@ -110,7 +111,6 @@ onMounted(() => {
     cleanupFns.push(() => window.removeEventListener('scroll', updateGridShift));
   }
 
-  // Add scroll-linked horizontal movement while keeping the loop seamless
   const marqueeTrack = document.querySelector('.marquee-track');
   if (marqueeTrack && heroRef.value) {
     const loopDistance = () => marqueeTrack.scrollWidth / 3;
@@ -120,14 +120,12 @@ onMounted(() => {
       const heroRect = heroRef.value.getBoundingClientRect();
       const heroBottom = heroRect.bottom;
 
-      // Keep the marquee filled while the hero is on screen
       if (heroBottom > 0) {
         const distance = loopDistance();
         if (!distance) return;
 
         marqueeTrack.style.animation = 'none';
 
-        // Move right as the page scrolls down, but wrap so the track never empties.
         const scrollOffset = ((window.scrollY * 0.5) % distance + distance) % distance;
         marqueeTrack.style.transform = `translateX(calc(-33.333% + ${scrollOffset}px))`;
 
@@ -180,7 +178,7 @@ onMounted(() => {
   top: 8%;
   width: min(760px, 68vw);
   height: min(760px, 68vw);
-  background: radial-gradient(circle at 44% 42%, rgba(71, 134, 171, 0.14) 0%, rgba(71, 134, 171, 0.09) 34%, rgba(71, 134, 171, 0) 72%);
+  background: radial-gradient(circle at 44% 42%, rgba(0, 53, 128, 0.18) 0%, rgba(0, 53, 128, 0.09) 34%, rgba(0, 53, 128, 0) 72%);
   animation: hero-radial-drift-a 36s ease-in-out infinite alternate;
 }
 
@@ -189,28 +187,18 @@ onMounted(() => {
   top: 24%;
   width: min(680px, 60vw);
   height: min(680px, 60vw);
-  background: radial-gradient(circle at 56% 48%, rgba(39, 97, 132, 0.12) 0%, rgba(39, 97, 132, 0.08) 36%, rgba(39, 97, 132, 0) 74%);
+  background: radial-gradient(circle at 56% 48%, rgba(206, 17, 38, 0.12) 0%, rgba(206, 17, 38, 0.06) 36%, rgba(206, 17, 38, 0) 74%);
   animation: hero-radial-drift-b 28s ease-in-out infinite alternate;
 }
 
 @keyframes hero-radial-drift-a {
-  0% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-
-  100% {
-    transform: translate3d(22px, -16px, 0) scale(1.03);
-  }
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(22px, -16px, 0) scale(1.03); }
 }
 
 @keyframes hero-radial-drift-b {
-  0% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-
-  100% {
-    transform: translate3d(-18px, 20px, 0) scale(1.04);
-  }
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(-18px, 20px, 0) scale(1.04); }
 }
 
 .hero-grid-atmosphere {
@@ -220,9 +208,9 @@ onMounted(() => {
   z-index: 1;
   opacity: 0.35;
   background-image:
-    linear-gradient(rgba(26, 44, 56, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26, 44, 56, 0.055) 1px, transparent 1px),
-    radial-gradient(ellipse 62% 46% at 50% 26%, rgba(40, 90, 122, 0.11), transparent 74%);
+    linear-gradient(rgba(0, 53, 128, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 53, 128, 0.055) 1px, transparent 1px),
+    radial-gradient(ellipse 62% 46% at 50% 26%, rgba(0, 53, 128, 0.11), transparent 74%);
   background-size: 42px 42px, 42px 42px, 100% 100%;
   background-position: 0 0, 0 0, center;
   transform: translate3d(0, 0, 0);
@@ -241,12 +229,19 @@ onMounted(() => {
   padding-bottom: 2.25rem;
 }
 
-.hero-logo {
-  width: 56px;
-  height: 56px;
+.hero-flags {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
   margin: 0 auto 1rem;
-  object-fit: contain;
-  display: block;
+}
+
+.flag-icon {
+  width: 44px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .hero-date {
@@ -262,7 +257,7 @@ onMounted(() => {
   margin: 0;
   text-transform: uppercase;
   line-height: 0.86;
-  font-size: clamp(3.2rem, 10.2vw, 8.3rem);
+  font-size: clamp(2.6rem, 8.5vw, 7rem);
   letter-spacing: -0.02em;
   font-weight: 400;
   font-family: "Bebas Neue", "Arial Narrow", "Segoe UI", sans-serif;
@@ -270,7 +265,7 @@ onMounted(() => {
 
 .hero-copy {
   margin: 0.78rem auto 0;
-  max-width: 28ch;
+  max-width: 36ch;
   font-size: clamp(1rem, 1.35vw, 1.16rem);
   color: #24282a;
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
@@ -318,12 +313,12 @@ onMounted(() => {
 }
 
 .cta-primary {
-  background: #fc4d0f;
+  background: #003580;
   color: #fff;
 }
 
 .cta-dark {
-  background: #20272b;
+  background: #ce1126;
   color: #fff;
 }
 
@@ -424,13 +419,8 @@ onMounted(() => {
 }
 
 @keyframes marquee-slide {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 @media (max-width: 900px) {
@@ -446,10 +436,6 @@ onMounted(() => {
   .cta {
     width: min(280px, 92vw);
     justify-content: center;
-  }
-
-  .curve-divider {
-    display: none;
   }
 
   .hero-marquee {

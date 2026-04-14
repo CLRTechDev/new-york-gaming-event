@@ -1,60 +1,53 @@
 ---
-const displaySpeakers = [
+const zones = [
   {
-    name: 'Rachel Kobetz',
-    role: 'Chief AI Experience Officer',
-    company: 'OpenAI',
-    logo: 'openai',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=90',
+    name: 'Unity Main Stage',
+    role: 'Live performances, DJs, hosts, and cultural showcases',
+    company: 'Performances & Culture',
+    icon: '🎤',
+    image: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
-    name: 'Randy Hunt',
-    role: 'Head of AI Product',
-    company: 'Notion',
-    logo: 'notion',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=90',
+    name: 'Champions Lounge',
+    role: 'Premium hospitality for sponsors, dignitaries, and invited guests',
+    company: 'VIP Experience',
+    icon: '🥂',
+    image: 'https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
-    name: 'Paula Scher',
-    role: 'AI Strategy Partner',
-    company: 'Anthropic',
-    logo: 'anthropic',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=1200&q=90',
+    name: 'Global Bites Food Fest',
+    role: 'International food experience with Haitian cuisine prominently featured',
+    company: 'Food & Culture',
+    icon: '🍽',
+    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
-    name: 'Nicole Michaelis',
-    role: 'Director of AI Platforms',
-    company: 'Vercel',
-    logo: 'vercel',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=90',
+    name: 'Little Champions Kids Zone',
+    role: 'Family-centered activities, games, and interactive youth programming',
+    company: 'Families & Youth',
+    icon: '⚽',
+    image: 'https://images.pexels.com/photos/1601775/pexels-photo-1601775.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
-    name: 'Mehmet Aydin Baytas',
-    role: 'AI Interface Engineer',
-    company: 'Stripe',
-    logo: 'stripe',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=90',
+    name: 'Unity Marketplace',
+    role: 'Curated vendor booths featuring businesses, artisans, and community brands',
+    company: 'Vendors & Community',
+    icon: '🛍',
+    image: 'https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
-    name: 'Maria Cortes Puch',
-    role: 'VP, Responsible AI Programs',
-    company: 'Linear',
-    logo: 'linear',
-    image: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=1200&q=90',
+    name: 'Champions Circle',
+    role: 'Sponsor installations and experiential brand activations',
+    company: 'Sponsor Activations',
+    icon: '★',
+    image: 'https://images.pexels.com/photos/1684187/pexels-photo-1684187.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
-    name: 'Jason Wild',
-    role: 'VP, AI Product Innovation',
-    company: 'PayPal',
-    logo: 'paypal',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=90',
-  },
-  {
-    name: 'Alexandra Goncalves',
-    role: 'VP, Applied AI in Health',
-    company: 'Figma',
-    logo: 'figma',
-    image: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=1200&q=90',
+    name: 'Culture Connect Pavilion',
+    role: 'Heritage, storytelling, and Haitian cultural engagement space',
+    company: 'Heritage & History',
+    icon: '🌍',
+    image: 'https://images.pexels.com/photos/2078076/pexels-photo-2078076.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
 ];
 ---
@@ -63,36 +56,34 @@ const displaySpeakers = [
   <div class="container speakers-wrap">
     <div class="section-head">
       <div class="section-copy">
-        <h2 id="speakers-title">Curated For What<br />Matters Now In The<br />AI Landscape</h2>
+        <h2 id="speakers-title">Seven Experience<br />Zones Built For<br />The Community</h2>
         <p>
-          Every speaker is selected for real-world outcomes, not social reach.
-          Meet AI leaders solving model quality, trust, and product adoption at scale.
+          Every zone is designed to deliver cultural pride, sponsor visibility, and family-friendly engagement. From the Unity Main Stage to the Culture Connect Pavilion.
         </p>
       </div>
     </div>
 
     <div class="carousel-shell" data-speaker-carousel>
-      <button class="carousel-nav carousel-nav-prev" type="button" data-dir="prev" aria-label="Previous speakers">
+      <button class="carousel-nav carousel-nav-prev" type="button" data-dir="prev" aria-label="Previous zones">
         <span aria-hidden="true">←</span>
       </button>
 
       <div class="speakers-viewport">
-        <div class="speakers-track" data-speaker-track role="list" aria-label="Featured conference speakers">
-          {displaySpeakers.map((speaker) => (
+        <div class="speakers-track" data-speaker-track role="list" aria-label="Festival experience zones">
+          {zones.map((zone) => (
             <article class="speaker-card" role="listitem">
               <div class="portrait-wrap">
-                <img src={speaker.image} alt={speaker.name} loading="lazy" />
+                <img src={zone.image} alt={zone.name} loading="lazy" />
+                <span class="zone-badge" aria-hidden="true">{zone.icon}</span>
               </div>
 
               <div class="card-meta">
-                <h3>{speaker.name}</h3>
-                <p class="role">{speaker.role}</p>
+                <h3>{zone.name}</h3>
+                <p class="role">{zone.role}</p>
 
                 <div class="company-row">
-                  <span class:list={["company-logo", `logo-${speaker.logo}`]} aria-hidden="true">
-                    {speaker.logo === 'vercel' ? '▲' : speaker.logo === 'openai' ? '◎' : speaker.company.charAt(0)}
-                  </span>
-                  <span class="company-name">{speaker.company}</span>
+                  <span class="company-logo" aria-hidden="true">{zone.icon}</span>
+                  <span class="company-name">{zone.company}</span>
                 </div>
               </div>
             </article>
@@ -100,12 +91,12 @@ const displaySpeakers = [
         </div>
       </div>
 
-      <button class="carousel-nav carousel-nav-next" type="button" data-dir="next" aria-label="Next speakers">
+      <button class="carousel-nav carousel-nav-next" type="button" data-dir="next" aria-label="Next zones">
         <span aria-hidden="true">→</span>
       </button>
     </div>
 
-    <a class="see-all-btn" href="/speakers">See all Speakers →</a>
+    <a class="see-all-btn" href="#sponsors">Become a Zone Sponsor →</a>
   </div>
 </section>
 
@@ -201,7 +192,7 @@ const displaySpeakers = [
 
 .section-copy p {
   margin: 1.05rem 0 0;
-  max-width: 34ch;
+  max-width: 38ch;
   color: #31363d;
   font-size: clamp(1.02rem, 1.1vw, 1.18rem);
   line-height: 1.55;
@@ -281,13 +272,13 @@ const displaySpeakers = [
   justify-content: center;
   padding: 0.85rem 1.35rem;
   border-radius: 999px;
-  background: #ff4d10;
+  background: #003580;
   color: #fff;
   text-decoration: none;
   font-size: 0.98rem;
   font-weight: 700;
   line-height: 1;
-  box-shadow: 0 10px 22px rgba(255, 77, 16, 0.2);
+  box-shadow: 0 10px 22px rgba(0, 53, 128, 0.2);
 }
 
 .portrait-wrap {
@@ -301,7 +292,7 @@ const displaySpeakers = [
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(160deg, rgba(112, 111, 179, 0.18) 8%, rgba(109, 142, 177, 0.08) 58%, transparent 100%);
+  background: linear-gradient(160deg, rgba(0, 53, 128, 0.18) 8%, rgba(206, 17, 38, 0.08) 58%, transparent 100%);
 }
 
 .portrait-wrap img {
@@ -310,6 +301,22 @@ const displaySpeakers = [
   aspect-ratio: 1.1;
   object-fit: cover;
   filter: saturate(0.88) contrast(1.02) grayscale(0.14);
+}
+
+.zone-badge {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  z-index: 2;
+  font-size: 1.6rem;
+  line-height: 1;
+  background: rgba(255,255,255,0.9);
+  border-radius: 999px;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .card-meta {
@@ -350,7 +357,7 @@ const displaySpeakers = [
   display: grid;
   place-items: center;
   color: #313746;
-  font-size: 0.56rem;
+  font-size: 0.7rem;
   font-weight: 700;
   line-height: 1;
   background: #ffffff;
@@ -361,14 +368,6 @@ const displaySpeakers = [
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1;
-}
-
-.logo-openai {
-  font-size: 0.62rem;
-}
-
-.logo-vercel {
-  font-size: 0.56rem;
 }
 
 @media (max-width: 1120px) {

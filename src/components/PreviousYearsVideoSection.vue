@@ -1,12 +1,12 @@
 <template>
-  <section class="tickets-section" id="tickets" aria-labelledby="tickets-title">
+  <section class="tickets-section" id="sponsors" aria-labelledby="tickets-title">
     <div class="container tickets-wrap">
-      <h2 id="tickets-title">GET YOUR TICKET</h2>
+      <h2 id="tickets-title">SPONSORSHIP OPPORTUNITIES</h2>
       <p class="tickets-subtitle">
-        Save up to €200 bundling multiple days. Onsite tickets require an application to purchase.
+        Partner with We Are One: Haiti World Cup Weekend. Reach a multicultural audience of 5,000+ attendees across a prestige Friday gala and large-scale Saturday festival.
       </p>
 
-      <div class="ticket-tabs" role="tablist" aria-label="Ticket categories">
+      <div class="ticket-tabs" role="tablist" aria-label="Sponsorship tiers">
         <button
           v-for="(category, index) in categories"
           :key="category.key"
@@ -38,27 +38,25 @@
               <p class="price-note">{{ card.priceNote }}</p>
             </div>
             <div class="price-values">
-              <p class="price-old">{{ card.oldPrice }}</p>
               <p class="price-new">{{ card.price }}</p>
-              <p class="price-vat">+19% VAT</p>
             </div>
           </div>
 
-          <a class="card-cta" :href="card.ctaUrl || 'https://ti.to/ae-events/ae-conference/with/conference-pass'">Apply for an Invite →</a>
+          <a class="card-cta" href="mailto:sponsorships@weareonehtworld.com">Inquire Now →</a>
 
           <div class="card-notch card-notch-bottom" aria-hidden="true"></div>
         </article>
       </div>
 
       <div class="included-block">
-        <p class="included-title">Included with onsite ticket</p>
+        <p class="included-title">Included with sponsorship</p>
         <div class="included-list">
           <span v-for="item in activeCategory.included" :key="item" class="included-item">✓ {{ item }}</span>
         </div>
       </div>
 
       <div class="payment-block">
-        <p class="payment-title">ACCEPTED PAYMENT METHODS</p>
+        <p class="payment-title">CONTACT US TO SPONSOR</p>
         <div class="payment-list">
           <div v-for="method in activeCategory.payments" :key="method.label" class="payment-method">
             <div class="payment-icon" aria-hidden="true">{{ method.icon }}</div>
@@ -78,168 +76,117 @@ import { computed, ref } from 'vue';
 
 const categories = [
   {
-    key: 'bundles',
-    label: 'Bundles',
+    key: 'headline',
+    label: 'Headline',
     cards: [
       {
-        dates: 'SEP 16+17+18',
-        save: 'SAVE € 200',
-        title: 'Super IC Day + Strategy Day + Conference',
-        copy: 'Attend all 3 days, including the full day and 2 half day workshops selection with the biggest savings.',
-        priceLabel: 'Early Bird',
-        priceNote: 'Until June 1st',
-        oldPrice: '€1.430',
-        price: '€1.300',
+        dates: 'TIER 1',
+        save: '2 SLOTS ONLY',
+        title: 'Presenting Sponsor',
+        copy: '"Presenting Sponsor" title across GALA & Festival. Logo on all Step and Repeats, credentialed badges, event program (digital & print), all screens, gift bags, and Champions Lounge access.',
+        priceLabel: 'Investment',
+        priceNote: 'Limited availability',
+        price: '$100,000',
       },
       {
-        dates: 'SEP 17+18',
-        save: 'SAVE € 100',
-        title: 'Strategy & Biz Day + Conference',
-        copy: 'Choose two half day workshops on the second day (September 17) and attend the Conference Day (September 18)',
-        priceLabel: 'Early Bird',
-        priceNote: 'Until June 1st',
-        oldPrice: '€980',
-        price: '€900',
+        dates: 'TIER 2',
+        save: '4 SLOTS',
+        title: 'Premier Sponsor',
+        copy: 'Logo on Step and Repeat at Community Day, credentialed badges, event program (digital & print), all screens, on-stage recognition at GALA & Community Day, gift bags, and dedicated festival booth.',
+        priceLabel: 'Investment',
+        priceNote: 'Limited availability',
+        price: '$50,000',
       },
       {
-        dates: 'SEP 16+18',
-        save: 'SAVE € 100',
-        title: 'Super IC Day + Conference',
-        copy: 'Choose a full day workshop on the first day (September 16) and attend the Conference Day (September 18)',
-        priceLabel: 'Early Bird',
-        priceNote: 'Until June 1st',
-        oldPrice: '€810',
-        price: '€780',
+        dates: 'TIER 3',
+        save: 'AVAILABLE',
+        title: 'Gold Sponsor',
+        copy: 'Logo on credentialed badges, digital event program, featured on all screens, on-stage recognition during Community Day, social media & marketing campaigns, 2 GALA passes, and mobile app listing.',
+        priceLabel: 'Investment',
+        priceNote: 'Multiple slots',
+        price: '$20,000',
       },
     ],
-    included: ['Materials & Recordings', 'ARTHAM Welcome Kit', 'Food & Drinks', 'Certificate of Attendance'],
+    included: ['On-Stage Recognition', 'Logo Placement', 'Social Media Mentions', 'GALA Access', 'Mobile App Listing'],
     payments: [
-      { icon: '▣', label: 'Credit Card', note: 'VISA, Mastercard, AMEX' },
-      { icon: '◫', label: 'Bank Transfer', note: 'Pay with Invoice' },
+      { icon: '✉', label: 'Email Us', note: 'sponsorships@weareonehtworld.com' },
+      { icon: '📞', label: 'Call Us', note: 'Contact for details' },
     ],
   },
   {
-    key: 'single-day',
-    label: 'Single Day',
+    key: 'community',
+    label: 'Community',
     cards: [
       {
-        dates: 'SEP 16',
-        save: 'SAVE € 80',
-        title: 'Strategy Day Pass',
-        copy: 'A focused full-day experience for product and design teams looking for practical methods.',
-        priceLabel: 'Standard',
-        priceNote: 'Limited seats',
-        oldPrice: '€690',
-        price: '€640',
+        dates: 'TIER 4',
+        save: 'AVAILABLE',
+        title: 'Community Sponsor',
+        copy: 'Logo on digital event program, marketing campaigns (social media, email, newsletters), on-stage recognition during Community Day, partner social media mentions, and mobile app listing.',
+        priceLabel: 'Investment',
+        priceNote: 'Multiple slots',
+        price: '$10,000',
       },
       {
-        dates: 'SEP 17',
-        save: 'SAVE € 50',
-        title: 'Biz Day Pass',
-        copy: 'A half-day workshop pass for teams exploring design systems, strategy, and operations.',
-        priceLabel: 'Standard',
-        priceNote: 'Limited seats',
-        oldPrice: '€420',
-        price: '€390',
+        dates: 'TIER 5',
+        save: 'AVAILABLE',
+        title: 'Supporting Partner',
+        copy: 'Logo on event program, marketing campaigns including social media mentions and email blasts, and mobile app listing. Great entry-level visibility for community-facing brands.',
+        priceLabel: 'Investment',
+        priceNote: 'Multiple slots',
+        price: '$5,000',
       },
       {
-        dates: 'SEP 18',
-        save: 'SAVE € 60',
-        title: 'Conference Day Pass',
-        copy: 'Join the main conference day for talks, panels, and networking with the design community.',
-        priceLabel: 'Standard',
-        priceNote: 'Limited seats',
-        oldPrice: '€510',
-        price: '€470',
+        dates: 'CONTACT US',
+        save: 'CUSTOM',
+        title: 'Custom Partnership',
+        copy: 'Looking for a specific zone sponsorship? We offer naming rights and dedicated activations for the Unity Main Stage, Champions Lounge, Food Fest, Kids Zone, Marketplace, and Red Carpet.',
+        priceLabel: 'Custom Pricing',
+        priceNote: 'Tailored packages',
+        price: 'Inquire',
       },
     ],
-    included: ['Materials & Recordings', 'ARTHAM Welcome Kit', 'Food & Drinks', 'Certificate of Attendance'],
+    included: ['Social Media Mentions', 'Marketing Campaigns', 'Event Program Listing', 'Mobile App Listing'],
     payments: [
-      { icon: '▣', label: 'Credit Card', note: 'VISA, Mastercard, AMEX' },
-      { icon: '◫', label: 'Bank Transfer', note: 'Pay with Invoice' },
+      { icon: '✉', label: 'Email Us', note: 'sponsorships@weareonehtworld.com' },
+      { icon: '📞', label: 'Call Us', note: 'Contact for details' },
     ],
   },
   {
-    key: 'leadership',
-    label: 'Leadership',
+    key: 'vendor',
+    label: 'Vendor',
     cards: [
       {
-        dates: 'SEP 16+17',
-        save: 'SAVE € 120',
-        title: 'Leadership Bundle',
-        copy: 'Two days for design leaders focused on people, decision-making, and organizational impact.',
-        priceLabel: 'Early Bird',
-        priceNote: 'Until June 1st',
-        oldPrice: '€1.120',
-        price: '€1.000',
+        dates: 'VENDOR TIER 1',
+        save: 'AVAILABLE',
+        title: 'Premium Vendor Table',
+        copy: '10×20 tent space with table, logo on one side sign, mentions on social media and website, and mobile app listing. Priority placement for Haitian-owned businesses and aligned community brands.',
+        priceLabel: 'Investment',
+        priceNote: 'Saturday Festival only',
+        price: '$2,500',
       },
       {
-        dates: 'SEP 17',
-        save: 'SAVE € 60',
-        title: 'Leadership Workshop',
-        copy: 'A half-day session built for design managers and leaders shaping teams and culture.',
-        priceLabel: 'Early Bird',
-        priceNote: 'Until June 1st',
-        oldPrice: '€520',
-        price: '€460',
+        dates: 'VENDOR TIER 2',
+        save: 'AVAILABLE',
+        title: 'Standard Vendor Table',
+        copy: '10×10 tent space with table, logo on one sign, mentions on social media and website, and mobile app listing. Open to artisans, food vendors, community organizations, and small businesses.',
+        priceLabel: 'Investment',
+        priceNote: 'Saturday Festival only',
+        price: '$1,500',
       },
       {
-        dates: 'SEP 18',
-        save: 'SAVE € 90',
-        title: 'Leadership Conference Day',
-        copy: 'Join the conference day with curated leadership sessions and conversations.',
-        priceLabel: 'Early Bird',
-        priceNote: 'Until June 1st',
-        oldPrice: '€850',
-        price: '€760',
+        dates: 'APPLY NOW',
+        save: 'LIMITED SPOTS',
+        title: 'Vendor Application',
+        copy: 'We prioritize Haitian-owned businesses, strong food vendors, family-friendly products, artisans, and aligned community organizations. Visual quality and clear setup standards are required.',
+        priceLabel: 'Apply Early',
+        priceNote: 'Limited vendor spots',
+        price: 'Apply',
       },
     ],
-    included: ['Materials & Recordings', 'ARTHAM Welcome Kit', 'Food & Drinks', 'Certificate of Attendance'],
+    included: ['Tent & Table Space', 'Signage Placement', 'Social Media Mentions', 'Mobile App Listing'],
     payments: [
-      { icon: '▣', label: 'Credit Card', note: 'VISA, Mastercard, AMEX' },
-      { icon: '◫', label: 'Bank Transfer', note: 'Pay with Invoice' },
-    ],
-  },
-  {
-    key: 'online',
-    label: 'Online',
-    cards: [
-      {
-        dates: 'STREAM PASS',
-        save: 'SAVE € 40',
-        title: 'Conference Livestream',
-        copy: 'Watch the conference day live and stay connected to the talks from anywhere.',
-        priceLabel: 'Online',
-        priceNote: 'Replay included',
-        oldPrice: '€210',
-        price: '€170',
-        ctaUrl: 'https://ti.to/ae-events/ae-conference/with/conference-pass',
-      },
-      {
-        dates: 'STREAM + REPLAY',
-        save: 'SAVE € 50',
-        title: 'Workshop + Conference Replay',
-        copy: 'Get access to recorded talks, selected workshops, and the conference livestream.',
-        priceLabel: 'Online',
-        priceNote: 'Replay included',
-        oldPrice: '€260',
-        price: '€210',
-      },
-      {
-        dates: 'TEAM PASS',
-        save: 'SAVE € 70',
-        title: 'Team Livestream Access',
-        copy: 'Best for distributed teams who want the conference together without onsite attendance.',
-        priceLabel: 'Online',
-        priceNote: 'Replay included',
-        oldPrice: '€320',
-        price: '€250',
-      },
-    ],
-    included: ['Materials & Recordings', 'ARTHAM Welcome Kit', 'Food & Drinks', 'Certificate of Attendance'],
-    payments: [
-      { icon: '▣', label: 'Credit Card', note: 'VISA, Mastercard, AMEX' },
-      { icon: '◫', label: 'Bank Transfer', note: 'Pay with Invoice' },
+      { icon: '✉', label: 'Email Us', note: 'vendors@weareonehtworld.com' },
+      { icon: '📞', label: 'Call Us', note: 'Contact for details' },
     ],
   },
 ];
@@ -255,7 +202,7 @@ function selectCategory(index) {
 
 <style scoped>
 .tickets-section {
-  background: #1e2223;
+  background: #0a1928;
   padding: 3rem 0 4.5rem;
   color: #eef1f2;
 }
@@ -290,7 +237,7 @@ function selectCategory(index) {
   gap: 0.25rem;
   padding: 0.28rem;
   border-radius: 999px;
-  background: #303537;
+  background: #1a2d42;
 }
 
 .ticket-tab {
@@ -306,7 +253,7 @@ function selectCategory(index) {
 }
 
 .ticket-tab.active {
-  background: #ff4d10;
+  background: #003580;
   color: #fff;
 }
 
@@ -335,7 +282,7 @@ function selectCategory(index) {
   left: 50%;
   width: 38px;
   height: 24px;
-  background: #1e2223;
+  background: #0a1928;
   transform: translateX(-50%);
   pointer-events: none;
 }
@@ -370,8 +317,8 @@ function selectCategory(index) {
   margin: 0;
   padding: 0.22rem 0.45rem;
   border-radius: 999px;
-  background: #d8f0ce;
-  color: #4f8a3d;
+  background: #d4e3f7;
+  color: #003580;
   font-size: 0.76rem;
   font-weight: 800;
   white-space: nowrap;
@@ -399,7 +346,7 @@ function selectCategory(index) {
   line-height: 1.42;
   min-height: 5.68em;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -412,7 +359,7 @@ function selectCategory(index) {
   align-items: end;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 5.8rem;
+  min-height: 4rem;
 }
 
 .price-label {
@@ -433,25 +380,11 @@ function selectCategory(index) {
   text-align: right;
 }
 
-.price-old {
-  margin: 0;
-  font-size: 1.22rem;
-  color: #8d9295;
-  text-decoration: line-through;
-}
-
 .price-new {
   margin: 0;
-  font-size: 1.22rem;
-  color: #1e2326;
+  font-size: 1.5rem;
+  color: #003580;
   font-weight: 700;
-}
-
-.price-vat {
-  margin: 0.08rem 0 0;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: #5d656b;
 }
 
 .card-cta {
@@ -462,7 +395,7 @@ function selectCategory(index) {
   width: 100%;
   min-height: 46px;
   border-radius: 999px;
-  background: #ff4d10;
+  background: #003580;
   color: #fff;
   text-decoration: none;
   font-weight: 800;
@@ -534,7 +467,7 @@ function selectCategory(index) {
   background: rgba(255, 255, 255, 0.12);
   display: grid;
   place-items: center;
-  font-weight: 800;
+  font-size: 1.2rem;
 }
 
 .payment-label {
@@ -593,9 +526,6 @@ function selectCategory(index) {
 
   .card-pricing {
     margin-top: 0.9rem;
-  }
-
-  .card-pricing {
     flex-direction: column;
     align-items: flex-start;
   }

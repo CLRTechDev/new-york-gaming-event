@@ -1,16 +1,16 @@
 ---
 const links = [
-  { label: 'Program', href: '#lineup' },
-  { label: 'Lineup', href: '#lineup' },
-  { label: 'Leadership Events', href: '#lineup', badge: 'NEW' },
-  { label: 'Partners', href: '#lineup' },
+  { label: 'About', href: '#lineup' },
+  { label: 'Schedule', href: '#tickets' },
+  { label: 'Experience Zones', href: '#speakers', badge: 'NEW' },
+  { label: 'Sponsors', href: '#sponsors' },
 ];
 ---
 
 <header class="site-header" id="top">
   <div class="container header-wrap">
-    <a href="/" class="brand-mark" aria-label="ARTHAM AI Summit home">
-      <img class="brand-logo" src="/artham.png" alt="ARTHAM" />
+    <a href="/" class="brand-mark" aria-label="We Are One home">
+      <img class="brand-logo" src="/flag-haiti.svg" alt="Haiti flag" />
     </a>
 
     <nav aria-label="Main navigation" class="main-nav">
@@ -27,7 +27,7 @@ const links = [
     </nav>
 
     <div class="header-cta">
-      <a href="https://ti.to/ae-events/ae-conference/with/conference-pass" class="btn-primary">Tickets</a>
+      <a href="#sponsors" class="btn-primary">Become a Sponsor</a>
     </div>
   </div>
 </header>
@@ -62,12 +62,13 @@ const links = [
   place-items: center;
   text-decoration: none;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
 }
 
 .brand-logo {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
   display: block;
 }
 
@@ -114,7 +115,7 @@ const links = [
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  background: #ff4f12;
+  background: #003580;
   color: white;
   padding: 0.2rem 0.45rem;
   border-radius: 3px;
@@ -129,22 +130,21 @@ const links = [
 
 .btn-primary {
   padding: 0.7rem 1.4rem;
-  background: #ff5a14;
+  background: #003580;
   color: white;
   text-decoration: none;
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.9rem;
-  box-shadow: 0 4px 12px rgba(255, 79, 18, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 53, 128, 0.3);
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
-  backdrop-filter: none;
 }
 
 .btn-primary:hover {
-  background: #e63f0c;
-  box-shadow: 0 6px 16px rgba(255, 79, 18, 0.4);
+  background: #002666;
+  box-shadow: 0 6px 16px rgba(0, 53, 128, 0.4);
   transform: translateY(-1px);
 }
 
