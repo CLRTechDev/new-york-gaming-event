@@ -1,10 +1,12 @@
 # Claude Project Context: We Are One World Cup
 
 ## Overview
+
 Project: **We Are One: Haiti World Cup Weekend**
 An event website built with Astro and Vue for a major cultural festival in Atlanta, GA. Date TBD (2026).
 
 ## Technical Core
+
 - **Astro 6 + Vue 3**: Hybrid architecture. Static content uses `.astro`; interactive/animated components use `.vue` with `client:load`.
 - **Tailwind CSS 4**: Modern styling approach using the `@tailwindcss/vite` Vite plugin (CSS-first config, no `tailwind.config.js`).
 - **Motion**: High-performance animations in Vue components.
@@ -12,6 +14,7 @@ An event website built with Astro and Vue for a major cultural festival in Atlan
 - **Vercel Analytics**: `@vercel/analytics` is installed for deployment analytics.
 
 ## File Map
+
 - `src/pages/index.astro`: Primary landing page structure.
 - `src/components/HeroSection.vue`: Interactive hero with Motion animations and scroll-synced marquee.
 - `src/components/SectionScrollNav.vue`: Sticky floating nav, visible after hero scrolls past.
@@ -28,6 +31,7 @@ An event website built with Astro and Vue for a major cultural festival in Atlan
 - `public/flag-us.jpg`: US flag used in hero.
 
 ## AI Instructions for Claude
+
 1. **Component Creation**: Default to `.astro` unless state management or complex interactivity is required, in which case use `.vue`.
 2. **Tailwind 4**: Use CSS-first configuration. Avoid deprecated v3 patterns (no `tailwind.config.js`).
 3. **Motion**: Use the `motion` library for animations in Vue components.
@@ -36,6 +40,7 @@ An event website built with Astro and Vue for a major cultural festival in Atlan
 6. **Date**: The event date is **not yet determined**. Always use "Date TBD · Atlanta, GA · 2026" or equivalent. Never reference Juneteenth.
 
 ## Critical Paths
+
 - Always use `client:load` for Vue components needing hydration (e.g., Hero, Nav, Sponsorship section).
 - Maintain type safety in `cms.ts` and component props.
 - Nav section anchors: `#lineup` (About), `#tickets` (Schedule), `#speakers` (Experience Zones), `#sponsors` (Sponsorship).
