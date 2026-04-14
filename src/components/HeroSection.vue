@@ -9,7 +9,7 @@
         <img src="/flag-haiti.svg" alt="Haiti flag" class="flag-icon" />
         <img src="/flag-us.jpg" alt="US flag" class="flag-icon" />
       </div>
-      <p class="hero-date">Juneteenth Weekend · June 2026 · Atlanta, GA</p>
+      <p class="hero-date">Date TBD · Atlanta, GA · 2026</p>
       <h1 class="hero-title" ref="titleRef">We Are One:<br />Haiti World Cup<br />Weekend</h1>
       <p class="hero-copy">Celebrating Haiti. Honoring freedom. Uniting cultures. A two-day signature cultural experience for families, leaders, and community.</p>
 
