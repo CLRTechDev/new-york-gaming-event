@@ -1,9 +1,9 @@
 <template>
   <section class="tickets-section" id="sponsors" aria-labelledby="tickets-title">
     <div class="container tickets-wrap">
-      <h2 id="tickets-title">SPONSORSHIP OPPORTUNITIES</h2>
+      <h2 id="tickets-title">PARTNERSHIP OPPORTUNITIES</h2>
       <p class="tickets-subtitle">
-        Partner with We Are One: Haiti World Cup Weekend. Reach a multicultural audience of 5,000+ attendees across a prestige Friday gala and large-scale Saturday festival.
+        Partner with New Dawn of Gaming. Access a curated audience of financial leaders, policymakers, investors, and innovators united by the Panama vs England World Cup moment.
       </p>
 
       <div class="ticket-tabs" role="tablist" aria-label="Sponsorship tiers">
@@ -42,7 +42,7 @@
             </div>
           </div>
 
-          <a class="card-cta" href="mailto:sponsorships@weareonehtworld.com">Inquire Now →</a>
+          <a class="card-cta" href="mailto:partners@onyxgoldgroup.com">Inquire Now →</a>
 
           <div class="card-notch card-notch-bottom" aria-hidden="true"></div>
         </article>
@@ -56,7 +56,7 @@
       </div>
 
       <div class="payment-block">
-        <p class="payment-title">CONTACT US TO SPONSOR</p>
+        <p class="payment-title">CONTACT US TO PARTNER</p>
         <div class="payment-list">
           <div v-for="method in activeCategory.payments" :key="method.label" class="payment-method">
             <div class="payment-icon" aria-hidden="true">{{ method.icon }}</div>
@@ -81,111 +81,111 @@ const categories = [
     cards: [
       {
         dates: 'TIER 1',
-        save: '2 SLOTS ONLY',
-        title: 'Presenting Sponsor',
-        copy: '"Presenting Sponsor" title across GALA & Festival. Logo on all Step and Repeats, credentialed badges, event program (digital & print), all screens, gift bags, and Champions Lounge access.',
+        save: '1 SLOT ONLY',
+        title: 'Title Partner',
+        copy: '"Presented by" naming rights across all event materials. Prominent placement in fireside chat, match viewing, and tournament. VIP table for 8, keynote speaking slot, and first-look on all media coverage.',
         priceLabel: 'Investment',
-        priceNote: 'Limited availability',
-        price: '$100,000',
+        priceNote: 'Exclusive — 1 available',
+        price: '$50,000',
       },
       {
         dates: 'TIER 2',
-        save: '4 SLOTS',
-        title: 'Premier Sponsor',
-        copy: 'Logo on Step and Repeat at Community Day, credentialed badges, event program (digital & print), all screens, on-stage recognition at GALA & Community Day, gift bags, and dedicated festival booth.',
+        save: '2 SLOTS',
+        title: 'Founding Partner',
+        copy: 'Co-branded event identity. Logo on all screens and signage, dedicated VIP seating, recognition during fireside chat and match viewing, curated networking access, and branded tournament station.',
         priceLabel: 'Investment',
         priceNote: 'Limited availability',
-        price: '$50,000',
+        price: '$25,000',
       },
       {
         dates: 'TIER 3',
         save: 'AVAILABLE',
-        title: 'Gold Sponsor',
-        copy: 'Logo on credentialed badges, digital event program, featured on all screens, on-stage recognition during Community Day, social media & marketing campaigns, 2 GALA passes, and mobile app listing.',
+        title: 'Premier Partner',
+        copy: 'Logo on event program and digital assets, on-screen recognition during all three acts, social media campaign inclusion, 4 VIP passes, and branded presence in the Cross-Atlantic Finance Hub.',
         priceLabel: 'Investment',
         priceNote: 'Multiple slots',
-        price: '$20,000',
+        price: '$10,000',
       },
     ],
-    included: ['On-Stage Recognition', 'Logo Placement', 'Social Media Mentions', 'GALA Access', 'Mobile App Listing'],
+    included: ['Speaking Opportunity', 'VIP Table Access', 'On-Screen Branding', 'Social Campaign Inclusion', 'Networking Priority'],
     payments: [
-      { icon: '✉', label: 'Email Us', note: 'sponsorships@weareonehtworld.com' },
+      { icon: '✉', label: 'Email Us', note: 'partners@onyxgoldgroup.com' },
+      { icon: '📞', label: 'Call Us', note: 'Contact for details' },
+    ],
+  },
+  {
+    key: 'session',
+    label: 'Session',
+    cards: [
+      {
+        dates: 'SESSION PARTNER',
+        save: 'AVAILABLE',
+        title: 'Fireside Chat Sponsor',
+        copy: 'Brand your organisation as the host of the morning fireside chat. Includes opening remarks, logo on all session materials, dedicated introduction, and pre-event networking access.',
+        priceLabel: 'Investment',
+        priceNote: '1 slot per session',
+        price: '$7,500',
+      },
+      {
+        dates: 'SESSION PARTNER',
+        save: 'AVAILABLE',
+        title: 'Match Viewing Sponsor',
+        copy: 'Exclusive sponsor of the Panama vs England live viewing. Branded screens, half-time recognition, curated hospitality moment, and post-match media opportunity.',
+        priceLabel: 'Investment',
+        priceNote: '1 slot available',
+        price: '$7,500',
+      },
+      {
+        dates: 'SESSION PARTNER',
+        save: 'AVAILABLE',
+        title: 'Tournament Sponsor',
+        copy: 'Present the evening gaming tournament. Name your organisation in the bracket, award prizes branded to your company, and host the closing celebration with trophy presentation.',
+        priceLabel: 'Investment',
+        priceNote: '1 slot available',
+        price: '$5,000',
+      },
+    ],
+    included: ['Session Naming Rights', 'On-Screen Recognition', 'Social Mentions', 'Event Program Listing'],
+    payments: [
+      { icon: '✉', label: 'Email Us', note: 'partners@onyxgoldgroup.com' },
       { icon: '📞', label: 'Call Us', note: 'Contact for details' },
     ],
   },
   {
     key: 'community',
-    label: 'Community',
+    label: 'Supporting',
     cards: [
       {
         dates: 'TIER 4',
         save: 'AVAILABLE',
-        title: 'Community Sponsor',
-        copy: 'Logo on digital event program, marketing campaigns (social media, email, newsletters), on-stage recognition during Community Day, partner social media mentions, and mobile app listing.',
+        title: 'Associate Partner',
+        copy: 'Logo on event program and digital assets, social media mentions across event channels, 2 guest passes, and recognition in the post-event communications and recap content.',
         priceLabel: 'Investment',
         priceNote: 'Multiple slots',
-        price: '$10,000',
+        price: '$2,500',
       },
       {
         dates: 'TIER 5',
         save: 'AVAILABLE',
-        title: 'Supporting Partner',
-        copy: 'Logo on event program, marketing campaigns including social media mentions and email blasts, and mobile app listing. Great entry-level visibility for community-facing brands.',
+        title: 'Community Supporter',
+        copy: 'Brand recognition in the event program and event website. Ideal for organisations aligned with responsible gaming, fintech, or sport who want visible association at an accessible level.',
         priceLabel: 'Investment',
         priceNote: 'Multiple slots',
-        price: '$5,000',
+        price: '$1,000',
       },
       {
         dates: 'CONTACT US',
         save: 'CUSTOM',
         title: 'Custom Partnership',
-        copy: 'Looking for a specific zone sponsorship? We offer naming rights and dedicated activations for the Unity Main Stage, Champions Lounge, Food Fest, Kids Zone, Marketplace, and Red Carpet.',
+        copy: 'Looking for something tailored? We offer bespoke packages including VIP Lounge naming, networking dinner hosting, gaming station branding, and digital content co-production.',
         priceLabel: 'Custom Pricing',
         priceNote: 'Tailored packages',
         price: 'Inquire',
       },
     ],
-    included: ['Social Media Mentions', 'Marketing Campaigns', 'Event Program Listing', 'Mobile App Listing'],
+    included: ['Social Media Mentions', 'Event Program Listing', 'Digital Asset Inclusion'],
     payments: [
-      { icon: '✉', label: 'Email Us', note: 'sponsorships@weareonehtworld.com' },
-      { icon: '📞', label: 'Call Us', note: 'Contact for details' },
-    ],
-  },
-  {
-    key: 'vendor',
-    label: 'Vendor',
-    cards: [
-      {
-        dates: 'VENDOR TIER 1',
-        save: 'AVAILABLE',
-        title: 'Premium Vendor Table',
-        copy: '10×20 tent space with table, logo on one side sign, mentions on social media and website, and mobile app listing. Priority placement for Haitian-owned businesses and aligned community brands.',
-        priceLabel: 'Investment',
-        priceNote: 'Saturday Festival only',
-        price: '$2,500',
-      },
-      {
-        dates: 'VENDOR TIER 2',
-        save: 'AVAILABLE',
-        title: 'Standard Vendor Table',
-        copy: '10×10 tent space with table, logo on one sign, mentions on social media and website, and mobile app listing. Open to artisans, food vendors, community organizations, and small businesses.',
-        priceLabel: 'Investment',
-        priceNote: 'Saturday Festival only',
-        price: '$1,500',
-      },
-      {
-        dates: 'APPLY NOW',
-        save: 'LIMITED SPOTS',
-        title: 'Vendor Application',
-        copy: 'We prioritize Haitian-owned businesses, strong food vendors, family-friendly products, artisans, and aligned community organizations. Visual quality and clear setup standards are required.',
-        priceLabel: 'Apply Early',
-        priceNote: 'Limited vendor spots',
-        price: 'Apply',
-      },
-    ],
-    included: ['Tent & Table Space', 'Signage Placement', 'Social Media Mentions', 'Mobile App Listing'],
-    payments: [
-      { icon: '✉', label: 'Email Us', note: 'vendors@weareonehtworld.com' },
+      { icon: '✉', label: 'Email Us', note: 'partners@onyxgoldgroup.com' },
       { icon: '📞', label: 'Call Us', note: 'Contact for details' },
     ],
   },
@@ -253,7 +253,7 @@ function selectCategory(index) {
 }
 
 .ticket-tab.active {
-  background: #003580;
+  background: #0d1e3a;
   color: #fff;
 }
 
@@ -318,7 +318,7 @@ function selectCategory(index) {
   padding: 0.22rem 0.45rem;
   border-radius: 999px;
   background: #d4e3f7;
-  color: #003580;
+  color: #0d1e3a;
   font-size: 0.76rem;
   font-weight: 800;
   white-space: nowrap;
@@ -383,7 +383,7 @@ function selectCategory(index) {
 .price-new {
   margin: 0;
   font-size: 1.5rem;
-  color: #003580;
+  color: #0d1e3a;
   font-weight: 700;
 }
 
@@ -395,7 +395,7 @@ function selectCategory(index) {
   width: 100%;
   min-height: 46px;
   border-radius: 999px;
-  background: #003580;
+  background: #0d1e3a;
   color: #fff;
   text-decoration: none;
   font-weight: 800;

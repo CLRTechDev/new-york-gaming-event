@@ -1,53 +1,53 @@
 ---
-const zones = [
+const sessions = [
   {
-    name: 'Unity Main Stage',
-    role: 'Live performances, DJs, hosts, and cultural showcases',
-    company: 'Performances & Culture',
-    icon: '🎤',
-    image: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&fit=crop&w=1200&q=90',
+    name: 'Responsible Gaming Frameworks',
+    role: 'How jurisdictions are shaping regulation, consumer protection standards, and operator accountability across the Atlantic',
+    company: 'Policy & Regulation',
+    icon: '🛡',
+    image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
-    name: 'Champions Lounge',
-    role: 'Premium hospitality for sponsors, dignitaries, and invited guests',
-    company: 'VIP Experience',
-    icon: '🥂',
-    image: 'https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&fit=crop&w=1200&q=90',
+    name: 'Panama as a Financial Hub',
+    role: "Exploring Panama's positioning as a cross-Atlantic bridge for fintech, gaming capital, and international financial services",
+    company: 'Finance & Markets',
+    icon: '🇵🇦',
+    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
-    name: 'Global Bites Food Fest',
-    role: 'International food experience with Haitian cuisine prominently featured',
-    company: 'Food & Culture',
-    icon: '🍽',
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&fit=crop&w=1200&q=90',
+    name: 'The UK Gaming Market',
+    role: "Inside the world's most regulated gaming market — what operators, investors, and innovators can learn from the UK model",
+    company: 'Industry Insight',
+    icon: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+    image: 'https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
-    name: 'Little Champions Kids Zone',
-    role: 'Family-centered activities, games, and interactive youth programming',
-    company: 'Families & Youth',
+    name: 'Sport, Capital & Investment',
+    role: 'How football and esports are becoming new asset classes — from sponsorship ROI to private equity in club ownership',
+    company: 'Sports Finance',
     icon: '⚽',
-    image: 'https://images.pexels.com/photos/1601775/pexels-photo-1601775.jpeg?auto=compress&fit=crop&w=1200&q=90',
+    image: 'https://images.pexels.com/photos/1080885/pexels-photo-1080885.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
-    name: 'Unity Marketplace',
-    role: 'Curated vendor booths featuring businesses, artisans, and community brands',
-    company: 'Vendors & Community',
-    icon: '🛍',
-    image: 'https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&fit=crop&w=1200&q=90',
+    name: 'Fintech Meets Gaming',
+    role: 'Payment rails, digital wallets, and embedded finance — the infrastructure connecting players, operators, and regulators',
+    company: 'Fintech Innovation',
+    icon: '💡',
+    image: 'https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
-    name: 'Champions Circle',
-    role: 'Sponsor installations and experiential brand activations',
-    company: 'Sponsor Activations',
-    icon: '★',
-    image: 'https://images.pexels.com/photos/1684187/pexels-photo-1684187.jpeg?auto=compress&fit=crop&w=1200&q=90',
+    name: 'Live Match Viewing',
+    role: 'Panama vs England — World Cup live viewing in a premium, comfortable setting with curated hospitality and sponsor moments',
+    company: 'World Cup 2026',
+    icon: '🔴',
+    image: 'https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
-    name: 'Culture Connect Pavilion',
-    role: 'Heritage, storytelling, and Haitian cultural engagement space',
-    company: 'Heritage & History',
-    icon: '🌍',
-    image: 'https://images.pexels.com/photos/2078076/pexels-photo-2078076.jpeg?auto=compress&fit=crop&w=1200&q=90',
+    name: 'Gaming Tournament',
+    role: 'Competitive bracket play across curated titles — all guests welcome. Prizes, a live leaderboard, and a closing awards celebration',
+    company: 'Evening Play',
+    icon: '🎮',
+    image: 'https://images.pexels.com/photos/7862608/pexels-photo-7862608.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
 ];
 ---
@@ -56,34 +56,34 @@ const zones = [
   <div class="container speakers-wrap">
     <div class="section-head">
       <div class="section-copy">
-        <h2 id="speakers-title">Seven Experience<br />Zones Built For<br />The Community</h2>
+        <h2 id="speakers-title">Seven Sessions<br />Shaping the<br />New Dawn</h2>
         <p>
-          Every zone is designed to deliver cultural pride, sponsor visibility, and family-friendly engagement. From the Unity Main Stage to the Culture Connect Pavilion.
+          Each session is designed to spark real conversation — on regulation, opportunity, capital, and the future where sport and finance intersect.
         </p>
       </div>
     </div>
 
     <div class="carousel-shell" data-speaker-carousel>
-      <button class="carousel-nav carousel-nav-prev" type="button" data-dir="prev" aria-label="Previous zones">
+      <button class="carousel-nav carousel-nav-prev" type="button" data-dir="prev" aria-label="Previous sessions">
         <span aria-hidden="true">←</span>
       </button>
 
       <div class="speakers-viewport">
-        <div class="speakers-track" data-speaker-track role="list" aria-label="Festival experience zones">
-          {zones.map((zone) => (
+        <div class="speakers-track" data-speaker-track role="list" aria-label="Event sessions">
+          {sessions.map((session) => (
             <article class="speaker-card" role="listitem">
               <div class="portrait-wrap">
-                <img src={zone.image} alt={zone.name} loading="lazy" />
-                <span class="zone-badge" aria-hidden="true">{zone.icon}</span>
+                <img src={session.image} alt={session.name} loading="lazy" />
+                <span class="zone-badge" aria-hidden="true">{session.icon}</span>
               </div>
 
               <div class="card-meta">
-                <h3>{zone.name}</h3>
-                <p class="role">{zone.role}</p>
+                <h3>{session.name}</h3>
+                <p class="role">{session.role}</p>
 
                 <div class="company-row">
-                  <span class="company-logo" aria-hidden="true">{zone.icon}</span>
-                  <span class="company-name">{zone.company}</span>
+                  <span class="company-logo" aria-hidden="true">{session.icon}</span>
+                  <span class="company-name">{session.company}</span>
                 </div>
               </div>
             </article>
@@ -91,12 +91,12 @@ const zones = [
         </div>
       </div>
 
-      <button class="carousel-nav carousel-nav-next" type="button" data-dir="next" aria-label="Next zones">
+      <button class="carousel-nav carousel-nav-next" type="button" data-dir="next" aria-label="Next sessions">
         <span aria-hidden="true">→</span>
       </button>
     </div>
 
-    <a class="see-all-btn" href="#sponsors">Become a Zone Sponsor →</a>
+    <a class="see-all-btn" href="#sponsors">Become a Session Partner →</a>
   </div>
 </section>
 
@@ -272,7 +272,7 @@ const zones = [
   justify-content: center;
   padding: 0.85rem 1.35rem;
   border-radius: 999px;
-  background: #003580;
+  background: #0d1e3a;
   color: #fff;
   text-decoration: none;
   font-size: 0.98rem;

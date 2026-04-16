@@ -1,32 +1,32 @@
 ---
 const dayEvents = [
   {
-    title: 'The Unity Gala',
-    description: 'Red carpet arrival, welcome reception, cultural showcase, sponsor recognition, honors, and signature entertainment. A prestige evening for VIPs, sponsors, and community leaders.',
-    spots: 'Invite Only',
-    price: 'Friday · Date TBD · Atlanta',
-    date: 'Friday Evening',
-    image: 'https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800',
-    cta: 'Become a Sponsor',
+    title: 'Act I · Gaming Tournament',
+    description: 'Competitive bracket play across curated titles, a live leaderboard, sponsor-branded stations, and prize recognition — open to all guests. The day kicks off with play.',
+    spots: 'Open to All',
+    price: '27 June 2026 · 1:00–3:30 PM',
+    date: 'Early Afternoon',
+    image: 'https://images.pexels.com/photos/7862608/pexels-photo-7862608.jpeg?auto=compress&cs=tinysrgb&w=800',
+    cta: 'Become a Partner',
     href: '#sponsors',
   },
   {
-    title: 'We Are One Festival',
-    description: 'Unity Main Stage, Global Bites Food Fest, Little Champions Kids Zone, Unity Marketplace, Champions Circle, and Culture Connect Pavilion. A full-day public celebration.',
-    spots: '~5,000 Attendees',
-    price: 'Saturday · Open to the Public',
-    date: 'Saturday All Day',
-    image: 'https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=800',
-    cta: 'Get Tickets',
+    title: 'Act II · Fireside Chat',
+    description: 'Financial leaders and policymakers explore responsible gaming frameworks, cross-Atlantic capital flows, and how Panama and the UK are positioning as complementary financial hubs.',
+    spots: 'All Guests',
+    price: '27 June 2026 · 4:00 PM',
+    date: 'Afternoon',
+    image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800',
+    cta: 'View Agenda',
     href: '#tickets',
   },
   {
-    title: 'Haiti World Cup Weekend',
-    description: 'Celebrating Haiti on the world stage. Honoring freedom. Uniting cultures across Atlanta and beyond. A signature annual event with long-term community impact.',
-    spots: 'Two-Day Event',
-    price: 'Atlanta, GA · 2026',
-    date: 'Fri + Sat',
-    image: 'https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=800',
+    title: 'Act III · Panama vs England',
+    description: 'Live World Cup match viewing in a premium lounge setting. Watch Panama face England at 5 PM, with curated hospitality, sponsor moments, and a post-match celebration to close the night.',
+    spots: 'All Guests',
+    price: '27 June 2026 · 5 PM Kick-off',
+    date: 'Evening',
+    image: 'https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=800',
     cta: 'Learn More',
     href: '#lineup',
   },
@@ -34,35 +34,35 @@ const dayEvents = [
 
 const zoneEvents = [
   {
-    title: 'Unity Main Stage',
-    description: 'Live performances, hosts, DJs, cultural showcases, and key community moments.',
-    meta: 'All Day Programming',
-    subMeta: 'Saturday Festival',
-    date: 'Main Stage',
-    icon: '🎤',
+    title: 'Responsible Gaming Forum',
+    description: 'Expert-led panels and discussions on regulatory frameworks, consumer protection, and the future of compliant gaming ecosystems.',
+    meta: 'Morning Programming',
+    subMeta: 'Fireside & Panel',
+    date: 'Discussion',
+    icon: '🛡',
   },
   {
-    title: 'Global Bites Food Fest',
-    description: 'International food experience with Haitian cuisine, family-friendly options, and community vendors.',
-    meta: 'Haitian & International',
-    subMeta: 'Saturday Festival',
-    date: 'Food & Drink',
-    icon: '🍽',
+    title: 'Cross-Atlantic Finance Hub',
+    description: 'Dedicated networking space for investors and founders exploring the Panama–UK financial corridor and emerging market opportunities tied to sport.',
+    meta: 'Investor Networking',
+    subMeta: 'All Day Access',
+    date: 'Finance',
+    icon: '🌐',
   },
   {
-    title: 'Little Champions Kids Zone',
-    description: 'Family-centered zone with youth activities, games, interactive programming, and safe fun.',
-    meta: 'Free with Admission',
-    subMeta: 'All Ages Welcome',
-    date: 'Kids Zone',
-    icon: '⚽',
+    title: 'VIP Lounge & Sponsor Suite',
+    description: 'A comfortable, premium environment for partners and invited guests — curated hospitality, private viewing of the match, and direct access to speakers.',
+    meta: 'Partners & Guests',
+    subMeta: 'Full Day',
+    date: 'VIP',
+    icon: '🥂',
   },
 ];
 ---
 
 <section class="program-stage" id="tickets" aria-labelledby="program-title">
   <div class="program-shell container">
-    <h2 id="program-title">Two Days To Celebrate<br />Haiti, Freedom &amp; Unity</h2>
+    <h2 id="program-title">One Day.<br />Four Acts of Opportunity.</h2>
 
     <div class="program-grid top-grid">
       {dayEvents.map((event, index) => (
@@ -94,7 +94,7 @@ const zoneEvents = [
       ))}
     </div>
 
-    <a href="#sponsors" class="invite-btn">Become a Sponsor →</a>
+    <a href="#sponsors" class="invite-btn">Become a Partner →</a>
   </div>
 </section>
 
@@ -297,7 +297,7 @@ const zoneEvents = [
   width: 100%;
   text-decoration: none;
   color: #f9fbff;
-  background: #003580;
+  background: #0d1e3a;
   border-radius: 999px;
   padding: 0.45rem 0.9rem;
   font-weight: 700;
@@ -396,7 +396,7 @@ const zoneEvents = [
   width: fit-content;
   text-decoration: none;
   color: #f6f8fb;
-  background: #ce1126;
+  background: #da121a;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 999px;
   padding: 0.7rem 1.35rem;

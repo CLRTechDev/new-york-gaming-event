@@ -1,16 +1,16 @@
 <template>
   <nav class="scroll-nav" :class="{ 'is-visible': isVisible }" aria-label="Section quick navigation">
     <a href="#top" class="logo-pill" aria-label="Back to top">
-      <img class="logo-image" src="/flag-haiti.svg" alt="We Are One" />
+      <span class="logo-emoji" aria-hidden="true">🎮</span>
     </a>
-    <a href="#tickets" class="nav-pill">Schedule</a>
+    <a href="#tickets" class="nav-pill">Agenda</a>
     <a href="#lineup" class="nav-pill">About</a>
     <a href="#speakers" class="nav-pill nav-pill-muted">
-      Experience Zones
+      Sessions
       <span class="badge-new">NEW</span>
     </a>
-    <a href="#sponsors" class="nav-pill">Sponsors</a>
-    <a href="#sponsors" class="nav-pill nav-pill-cta">Become a Sponsor</a>
+    <a href="#sponsors" class="nav-pill">Partners</a>
+    <a href="#sponsors" class="nav-pill nav-pill-cta">Become a Partner</a>
   </nav>
 </template>
 
@@ -104,10 +104,9 @@ onBeforeUnmount(() => {
   overflow: hidden;
 }
 
-.logo-image {
-  width: 38px;
-  height: 38px;
-  object-fit: cover;
+.logo-emoji {
+  font-size: 1.3rem;
+  line-height: 1;
   display: block;
 }
 
@@ -122,13 +121,13 @@ onBeforeUnmount(() => {
   line-height: 1;
   padding: 0.2rem 0.34rem;
   border-radius: 999px;
-  background: #ce1126;
+  background: #da121a;
   color: #fff;
 }
 
 .nav-pill-cta {
   margin-left: auto;
-  background: #003580;
+  background: #0d1e3a;
   color: #fff;
 }
 
