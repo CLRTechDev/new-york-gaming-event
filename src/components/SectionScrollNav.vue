@@ -1,16 +1,16 @@
 <template>
   <nav class="scroll-nav" :class="{ 'is-visible': isVisible }" aria-label="Section quick navigation">
-    <a href="#top" class="logo-pill" aria-label="Back to top">
+    <a href="/#top" class="logo-pill" aria-label="Back to top">
       <span class="logo-emoji" aria-hidden="true">🎮</span>
     </a>
-    <a href="#tickets" class="nav-pill">Agenda</a>
-    <a href="#lineup" class="nav-pill">About</a>
-    <a href="#speakers" class="nav-pill nav-pill-muted">
+    <a href="/tickets" class="nav-pill">Get Tickets</a>
+    <a href="/#lineup" class="nav-pill">About</a>
+    <a href="/#speakers" class="nav-pill nav-pill-muted">
       Sessions
       <span class="badge-new">NEW</span>
     </a>
-    <a href="#sponsors" class="nav-pill">Partners</a>
-    <a href="#sponsors" class="nav-pill nav-pill-cta">Become a Partner</a>
+    <a href="/#sponsors" class="nav-pill">Partners</a>
+    <a href="/sponsorship" class="nav-pill nav-pill-cta">Become a Partner</a>
   </nav>
 </template>
 

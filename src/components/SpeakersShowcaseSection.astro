@@ -1,6 +1,7 @@
 ---
 const sessions = [
   {
+    slug: 'responsible-gaming',
     name: 'Responsible Gaming Frameworks',
     role: 'How jurisdictions are shaping regulation, consumer protection standards, and operator accountability across the Atlantic',
     company: 'Policy & Regulation',
@@ -8,6 +9,7 @@ const sessions = [
     image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
+    slug: 'panama-finance',
     name: 'Panama as a Financial Hub',
     role: "Exploring Panama's positioning as a cross-Atlantic bridge for fintech, gaming capital, and international financial services",
     company: 'Finance & Markets',
@@ -15,6 +17,7 @@ const sessions = [
     image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
+    slug: 'uk-gaming',
     name: 'The UK Gaming Market',
     role: "Inside the world's most regulated gaming market — what operators, investors, and innovators can learn from the UK model",
     company: 'Industry Insight',
@@ -22,6 +25,7 @@ const sessions = [
     image: 'https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
+    slug: 'sport-capital',
     name: 'Sport, Capital & Investment',
     role: 'How football and esports are becoming new asset classes — from sponsorship ROI to private equity in club ownership',
     company: 'Sports Finance',
@@ -29,6 +33,7 @@ const sessions = [
     image: 'https://images.pexels.com/photos/1080885/pexels-photo-1080885.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
+    slug: 'fintech-gaming',
     name: 'Fintech Meets Gaming',
     role: 'Payment rails, digital wallets, and embedded finance — the infrastructure connecting players, operators, and regulators',
     company: 'Fintech Innovation',
@@ -36,6 +41,7 @@ const sessions = [
     image: 'https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
+    slug: 'match-viewing',
     name: 'Live Match Viewing',
     role: 'Panama vs England — World Cup live viewing in a premium, comfortable setting with curated hospitality and sponsor moments',
     company: 'World Cup 2026',
@@ -43,6 +49,7 @@ const sessions = [
     image: 'https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&fit=crop&w=1200&q=90',
   },
   {
+    slug: 'tournament',
     name: 'Gaming Tournament',
     role: 'Competitive bracket play across curated titles — all guests welcome. Prizes, a live leaderboard, and a closing awards celebration',
     company: 'Evening Play',
@@ -71,7 +78,7 @@ const sessions = [
       <div class="speakers-viewport">
         <div class="speakers-track" data-speaker-track role="list" aria-label="Event sessions">
           {sessions.map((session) => (
-            <article class="speaker-card" role="listitem">
+            <a href={`/zones/${session.slug}`} class="speaker-card" role="listitem">
               <div class="portrait-wrap">
                 <img src={session.image} alt={session.name} loading="lazy" />
                 <span class="zone-badge" aria-hidden="true">{session.icon}</span>
@@ -86,7 +93,7 @@ const sessions = [
                   <span class="company-name">{session.company}</span>
                 </div>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>
@@ -96,7 +103,7 @@ const sessions = [
       </button>
     </div>
 
-    <a class="see-all-btn" href="#sponsors">Become a Session Partner →</a>
+    <a class="see-all-btn" href="/sponsorship">Become a Session Partner →</a>
   </div>
 </section>
 

@@ -2,15 +2,15 @@
 
 ## Overview
 
-Project: **New Dawn of Gaming: Panama vs England**
-An event website built with Astro and Vue for a single-day premium event tied to the Panama vs England World Cup match. **Date: 27 June 2026. Match kicks off at 5 PM.**
+Project: **New Dawn of Gaming**
+An event website built with Astro and Vue for a single-day premium event for 200 attendees. **Date: 27 June 2026 at 181st and Amsterdam Ave, New York City.**
 
 **Event Format** (four acts, one day):
 
-1. **Act I — Gaming Tournament** (Early Afternoon, 1:00–3:30 PM, all guests): Competitive gaming tournament with bracket play, prizes, and awards celebration.
-2. **Act II — Fireside Chat** (Afternoon, 4:00 PM, all guests): Leaders from finance, gaming, and policy discuss responsible gaming and cross-Atlantic financial opportunities between Panama and the UK.
-3. **Act III — Match Viewing** (Evening, 5:00 PM kick-off, all guests): Live Panama vs England World Cup viewing in a premium lounge setting.
-4. **Act IV — Post-Match Party** (Evening, 8:00 PM onwards, all guests): Post-match celebration in a premium lounge setting.
+1. **Act I — Gaming Tournament** (Early Afternoon, 1:00–3:30 PM, 200 guests): Competitive gaming tournament with bracket play, prizes, and awards celebration.
+2. **Act II — Fireside Chat** (Afternoon, 4:00 PM, 200 guests): Leaders from finance, gaming, and policy discuss responsible gaming and cross-Atlantic financial opportunities.
+3. **Act III — Experience Zones** (All Day, 200 guests): Dedicated spaces for networking, finance, and gaming innovation.
+4. **Act IV — Closing Party** (Evening, 8:00 PM onwards, 200 guests): Post-match celebration in a premium lounge setting.
 
 ## Technical Core
 

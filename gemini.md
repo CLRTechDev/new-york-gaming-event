@@ -1,6 +1,6 @@
-# New Dawn of Gaming: Panama vs England
+# New Dawn of Gaming
 
-This project is an Astro-based frontend for **New Dawn of Gaming: Panama vs England**, a single-day premium event on **27 June 2026** tied to the World Cup match between Panama and England (5 PM kick-off).
+This project is an Astro-based frontend for **New Dawn of Gaming**, a premium event on **11 July 2026** at **The Loop, Georgia Tech, Atlanta**.
 
 ## Tech Stack
 
@@ -10,13 +10,13 @@ This project is an Astro-based frontend for **New Dawn of Gaming: Panama vs Engl
 - **Animations:** [Motion](https://motion.dev/)
 - **Analytics:** `@vercel/analytics`
 
-## Event Format (Four Acts, One Day — 27 June 2026)
+## Event Format (Four Acts, One Day — 11 July 2026)
 
 | Act | Time | Description |
 | --- | --- | --- |
 | Act I — Gaming Tournament | 1:00–3:30 PM | Competitive bracket play, prizes, and awards |
 | Act II — Fireside Chat | 4:00 PM | Finance, gaming & policy leaders on responsible gaming + cross-Atlantic opportunity |
-| Act III — Match Viewing | 5:00 PM kick-off | Live Panama vs England World Cup viewing (premium lounge) |
+| Act III — Experience Zones | All Day | Dedicated spaces for networking, finance, and gaming innovation |
 | Act IV — Post-Match Party | 8:00 PM onwards | Closing celebration in premium lounge setting |
 
 ## Project Structure

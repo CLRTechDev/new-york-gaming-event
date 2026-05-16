@@ -1,0 +1,191 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionScrollNav from '../../components/SectionScrollNav.vue';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const zones = [
+    {
+      slug: 'responsible-gaming',
+      title: 'Responsible Gaming Forum',
+      description: 'Expert-led panels and discussions on regulatory frameworks, consumer protection, and the future of compliant gaming ecosystems.',
+      highlights: ['Policy Frameworks', 'Player Protection', 'Global Compliance', 'AI in Regulation'],
+      image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg'
+    },
+    {
+      slug: 'panama-finance',
+      title: 'Panama Financial Hub',
+      description: 'Exploring Panama’s role as a strategic gateway for capital flows between the Americas and Europe, specifically within the gaming and fintech sectors.',
+      highlights: ['Special Economic Zones', 'Tax Frameworks', 'Banking Integration', 'Market Entry Strategies'],
+      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg'
+    },
+    {
+      slug: 'uk-gaming',
+      title: 'UK Gaming Market',
+      description: 'Deep dive into the United Kingdom’s mature gaming landscape, investment trends, and the regulatory evolution shaping one of the world’s largest markets.',
+      highlights: ['Market Statistics', 'Regulatory Trends', 'Investment Opportunities', 'Consumer Behavior'],
+      image: 'https://images.pexels.com/photos/7862608/pexels-photo-7862608.jpeg'
+    },
+    {
+      slug: 'sport-capital',
+      title: 'Sport & Capital',
+      description: 'The intersection of professional sports ownership, venture capital, and the monetization of fan engagement through gaming platforms.',
+      highlights: ['Club Ownership Models', 'Venture Capital Trends', 'Fan Tokens', 'Sponsorship ROI'],
+      image: 'https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg'
+    },
+    {
+      slug: 'fintech-gaming',
+      title: 'Fintech Meets Gaming',
+      description: 'How emerging payment technologies and blockchain are revolutionizing player transactions, reward systems, and operator transparency.',
+      highlights: ['Embedded Payments', 'Web3 & Gaming', 'Anti-Fraud Tech', 'Cryptocurrency Adoption'],
+      image: 'https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg'
+    },
+    {
+      slug: 'match-viewing',
+      title: 'Live Match Viewing',
+      description: 'A premium, high-energy environment dedicated to the Panama vs England World Cup clash. Curated hospitality meets world-class sport.',
+      highlights: ['Premium Lounge Access', 'Expert Commentary', 'Gourmet Hospitality', 'Networking Intervals'],
+      image: 'https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg'
+    },
+    {
+      slug: 'tournament',
+      title: 'Gaming Tournament',
+      description: 'The competitive heart of the event. A high-stakes bracket featuring top talent and community players competing for glory and prizes.',
+      highlights: ['Live Leaderboards', 'Pro-Am Brackets', 'Sponsor Prize Pools', 'Celebrity Showmatches'],
+      image: 'https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg'
+    }
+  ];
+
+  return zones.map(zone => ({
+    params: { slug: zone.slug },
+    props: { zone }
+  }));
+}
+
+const { zone } = Astro.props;
+---
+
+<Layout title={`${zone.title} | Experience Zone`}>
+  <SectionScrollNav client:load />
+
+  <main class="zone-page">
+    <div class="zone-hero" style={`background-image: linear-gradient(rgba(7, 19, 32, 0.8), rgba(7, 19, 32, 0.9)), url(${zone.image});`}>
+      <div class="container">
+        <h1>{zone.title}</h1>
+        <p class="zone-desc">{zone.description}</p>
+      </div>
+    </div>
+
+    <section class="zone-content">
+      <div class="container content-grid">
+        <div class="highlights-box">
+          <h2>Key Highlights</h2>
+          <ul>
+            {zone.highlights.map(h => <li>{h}</li>)}
+          </ul>
+        </div>
+        <div class="cta-box">
+          <h3>Join the Session</h3>
+          <p>Access to this zone is included with all GA and VIP tickets.</p>
+          <a href="/tickets" class="zone-cta">Get Your Tickets</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .zone-page {
+    background: #071320;
+    color: #fff;
+    padding-top: 80px;
+    min-height: 100vh;
+  }
+
+  .zone-hero {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .zone-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  .zone-desc {
+    font-size: 1.25rem;
+    color: #d7dbde;
+    max-width: 800px;
+    margin: 1.5rem auto 0;
+    line-height: 1.6;
+  }
+
+  .zone-content {
+    padding: 4rem 0;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+  }
+
+  .highlights-box h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #da121a;
+  }
+
+  .highlights-box ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .highlights-box li {
+    background: #1a2d42;
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    border-left: 4px solid #da121a;
+  }
+
+  .cta-box {
+    background: #1a2d42;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    height: fit-content;
+  }
+
+  .cta-box h3 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+  }
+
+  .zone-cta {
+    display: block;
+    background: #da121a;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,276 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionScrollNav from '../components/SectionScrollNav.vue';
+import Footer from '../components/Footer.astro';
+
+const categories = [
+  {
+    label: 'Headline',
+    cards: [
+      {
+        tier: 'TIER 1',
+        availability: '1 SLOT ONLY',
+        title: 'Title Partner',
+        copy: '"Presented by" naming rights across all event materials. Prominent placement in fireside chat, match viewing, and tournament. VIP table for 8, keynote speaking slot, and first-look on all media coverage.',
+        price: '$50,000',
+      },
+      {
+        tier: 'TIER 2',
+        availability: '2 SLOTS',
+        title: 'Founding Partner',
+        copy: 'Co-branded event identity. Logo on all screens and signage, dedicated VIP seating, recognition during fireside chat and match viewing, curated networking access, and branded tournament station.',
+        price: '$25,000',
+      },
+      {
+        tier: 'TIER 3',
+        availability: 'AVAILABLE',
+        title: 'Premier Partner',
+        copy: 'Logo on event program and digital assets, on-screen recognition during all three acts, social media campaign inclusion, 4 VIP passes, and branded presence in the Cross-Atlantic Finance Hub.',
+        price: '$10,000',
+      },
+    ]
+  },
+  {
+    label: 'Session',
+    cards: [
+      {
+        tier: 'SESSION PARTNER',
+        availability: 'AVAILABLE',
+        title: 'Fireside Chat Sponsor',
+        copy: 'Brand your organisation as the host of the morning fireside chat. Includes opening remarks, logo on all session materials, dedicated introduction, and pre-event networking access.',
+        price: '$7,500',
+      },
+      {
+        tier: 'SESSION PARTNER',
+        availability: 'AVAILABLE',
+        title: 'Match Viewing Sponsor',
+        copy: 'Exclusive sponsor of the Panama vs England live viewing. Branded screens, half-time recognition, curated hospitality moment, and post-match media opportunity.',
+        price: '$7,500',
+      },
+      {
+        tier: 'SESSION PARTNER',
+        availability: 'AVAILABLE',
+        title: 'Tournament Sponsor',
+        copy: 'Present the evening gaming tournament. Name your organisation in the bracket, award prizes branded to your company, and host the closing celebration with trophy presentation.',
+        price: '$5,000',
+      },
+    ]
+  }
+];
+---
+
+<Layout title="Sponsorship | New Dawn of Gaming">
+  <SectionScrollNav client:load />
+
+  <main class="sponsorship-page">
+    <header class="hero">
+      <div class="container">
+        <h1>Partner with the Future.</h1>
+        <p>Align your brand with the leaders of gaming, finance, and sport at the New Dawn of Gaming event on July 11, 2026.</p>
+        <a href="mailto:partners@onyxgoldgroup.com" class="hero-cta">Inquire Now</a>
+      </div>
+    </header>
+
+    <section class="tiers">
+      <div class="container">
+        {categories.map(category => (
+          <div class="category-block">
+            <h2>{category.label} Partnerships</h2>
+            <div class="grid">
+              {category.cards.map(card => (
+                <article class="sponsorship-card">
+                  <div class="card-header">
+                    <span class="tier">{card.tier}</span>
+                    <span class="availability">{card.availability}</span>
+                  </div>
+                  <h3>{card.title}</h3>
+                  <p>{card.copy}</p>
+                  <div class="card-footer">
+                    <span class="price-val">{card.price}</span>
+                    <a href="mailto:partners@onyxgoldgroup.com" class="card-btn">Inquire</a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="why-partner">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-num">500+</span>
+            <span class="stat-label">Senior Delegates</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">50+</span>
+            <span class="stat-label">Global Speakers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">$1B+</span>
+            <span class="stat-label">Managed Assets</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .sponsorship-page {
+    background: #0a1928;
+    color: #fff;
+    padding-top: 80px;
+  }
+
+  .hero {
+    padding: 6rem 0;
+    text-align: center;
+    background: radial-gradient(circle at center, #0d2040 0%, #0a1928 100%);
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+    color: #d7dbde;
+    max-width: 800px;
+    margin: 1.5rem auto 2.5rem;
+  }
+
+  .hero-cta {
+    background: #da121a;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  .hero-cta:hover {
+    transform: scale(1.05);
+  }
+
+  .category-block {
+    margin-bottom: 6rem;
+  }
+
+  .category-block h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .sponsorship-card {
+    background: #fff;
+    color: #24282b;
+    padding: 2.5rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 800;
+  }
+
+  .tier { color: #7c8489; }
+  .availability { 
+    background: #d4e3f7; 
+    color: #0d1e3a; 
+    padding: 2px 8px; 
+    border-radius: 999px;
+  }
+
+  .sponsorship-card h3 {
+    font-size: 1.75rem;
+    margin: 0 0 1rem;
+    font-family: "Space Grotesk", sans-serif;
+    color: #0d1e3a;
+  }
+
+  .sponsorship-card p {
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    color: #3d464c;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dotted #ccc;
+    padding-top: 1.5rem;
+  }
+
+  .price-val {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0d1e3a;
+  }
+
+  .card-btn {
+    background: #0d1e3a;
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .why-partner {
+    background: #0d1e3a;
+    padding: 6rem 0;
+    margin-top: 4rem;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    text-align: center;
+  }
+
+  .stat-num {
+    display: block;
+    font-size: 4rem;
+    font-weight: 800;
+    color: #da121a;
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  .stat-label {
+    font-size: 1.25rem;
+    color: #d7dbde;
+  }
+
+  @media (max-width: 768px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,236 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionScrollNav from '../components/SectionScrollNav.vue';
+import Footer from '../components/Footer.astro';
+import stripeLinks from '../../stripe-links.json';
+
+const ticketTiers = [
+  {
+    name: "General Admission",
+    price: "$150",
+    description: "Access to the Gaming Tournament, Fireside Chat, and Match Viewing in the main hall. Includes standing room and unreserved seating.",
+    features: ["Tournament Entry", "Fireside Chat Access", "Main Hall Viewing", "Complimentary Drink"],
+    cta: "Buy GA Ticket",
+    stripeLink: stripeLinks.ga
+  },
+  {
+    name: "VIP Lounge",
+    price: "$500",
+    description: "Premium experience in the private lounge with reserved seating, curated catering, open bar, and exclusive networking with speakers.",
+    features: ["Priority Seating", "Open Bar & Catering", "Meet & Greet", "VIP Gift Bag"],
+    cta: "Go VIP",
+    stripeLink: stripeLinks.vip,
+    popular: true
+  },
+  {
+    name: "Family Pass",
+    price: "$400",
+    description: "Covers entry for 2 Adults and 2 Youth (Under 18). A great way to experience the tournament and match viewing together.",
+    features: ["2 Adult Tickets", "2 Youth Tickets", "Reserved Family Section", "Tournament Fast-Track"],
+    cta: "Get Family Pass",
+    stripeLink: stripeLinks.family
+  },
+  {
+    name: "Youth (U18)",
+    price: "$75",
+    description: "Discounted entry for younger gamers and football fans. Must be accompanied by an adult GA or VIP ticket holder.",
+    features: ["Tournament Entry", "Match Viewing", "Youth Zone Access", "Soft Drink Voucher"],
+    cta: "Buy Youth Ticket",
+    stripeLink: stripeLinks.youth
+  }
+];
+---
+
+<Layout title="Tickets | New Dawn of Gaming">
+  <SectionScrollNav client:load />
+  
+  <main class="tickets-page">
+    <header class="tickets-hero">
+      <div class="container">
+        <h1>Experience the Dawn.</h1>
+        <p>Join us on July 11, 2026 at The Loop, Georgia Tech for an unforgettable intersection of gaming, finance, and football.</p>
+      </div>
+    </header>
+
+    <section class="pricing-section">
+      <div class="container">
+        <div class="pricing-grid">
+          {ticketTiers.map(tier => (
+            <div class={`tier-card ${tier.popular ? 'popular' : ''}`}>
+              {tier.popular && <span class="badge">Most Popular</span>}
+              <h2>{tier.name}</h2>
+              <p class="price">{tier.price}</p>
+              <p class="desc">{tier.description}</p>
+              <ul class="features">
+                {tier.features.map(f => <li>✓ {f}</li>)}
+              </ul>
+              <a href={tier.stripeLink} class="buy-btn">{tier.cta}</a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="event-info">
+      <div class="container info-grid">
+        <div class="info-item">
+          <h3>Date & Time</h3>
+          <p>July 11, 2026<br />1:00 PM – Late</p>
+        </div>
+        <div class="info-item">
+          <h3>Location</h3>
+          <p>The Loop, Georgia Tech<br />Atlanta, GA</p>
+        </div>
+        <div class="info-item">
+          <h3>Questions?</h3>
+          <p>Contact us at <a href="mailto:events@onyxgoldgroup.com">events@onyxgoldgroup.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .tickets-page {
+    background: #071320;
+    color: #fff;
+    padding-top: 80px;
+  }
+
+  .tickets-hero {
+    padding: 4rem 0 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, #0d1e3a 0%, #071320 100%);
+  }
+
+  .tickets-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  .tickets-hero p {
+    font-size: 1.25rem;
+    color: #d7dbde;
+    max-width: 700px;
+    margin: 1rem auto 0;
+  }
+
+  .pricing-section {
+    padding: 4rem 0;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .tier-card {
+    background: #1a2d42;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .tier-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255,255,255,0.3);
+  }
+
+  .tier-card.popular {
+    background: #0d2040;
+    border: 2px solid #da121a;
+  }
+
+  .badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #da121a;
+    padding: 0.25rem 1rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .tier-card h2 {
+    margin: 0;
+    font-size: 1.75rem;
+  }
+
+  .price {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 1rem 0;
+    color: #fff;
+  }
+
+  .desc {
+    color: #d7dbde;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+  }
+
+  .features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+  }
+
+  .features li {
+    margin-bottom: 0.5rem;
+    color: #e9eff2;
+  }
+
+  .buy-btn {
+    background: #da121a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    transition: background 0.3s ease;
+  }
+
+  .buy-btn:hover {
+    background: #b50f16;
+  }
+
+  .event-info {
+    background: #0d1e3a;
+    padding: 3rem 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .info-item h3 {
+    color: #da121a;
+    margin-bottom: 0.5rem;
+  }
+
+  .info-item a {
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

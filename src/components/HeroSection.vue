@@ -10,19 +10,19 @@
         <span class="flag-vs">vs</span>
         <img src="/flag-england.webp" alt="England flag" class="flag-icon" />
       </div>
-      <p class="hero-date">27 June 2026 · World Cup · 5 PM Kick-off</p>
+      <p class="hero-date">11 July 2026 · The Loop, Georgia Tech · 1 PM Kick-off</p>
       <h1 class="hero-title" ref="titleRef">New Dawn<br />of Gaming</h1>
-      <p class="hero-copy">A single day of competitive gaming, candid fireside conversation on responsible gaming and cross-Atlantic finance, live Panama vs England World Cup viewing, and a post-match celebration.</p>
+      <p class="hero-copy">A single day of competitive gaming, candid fireside conversation on responsible gaming and cross-Atlantic finance, live match viewing, and a post-match celebration.</p>
 
       <div class="hero-actions" ref="actionsRef">
-        <a href="#sponsors" class="cta cta-primary">
+        <a href="/sponsorship" class="cta cta-primary">
           <span>Become a Partner</span>
           <svg class="cta-icon cta-icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
             <path d="M3 8h8M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
           </svg>
         </a>
-        <a href="#tickets" class="cta cta-dark">
-          <span>View Agenda</span>
+        <a href="/tickets" class="cta cta-dark">
+          <span>Get Tickets</span>
           <svg class="cta-icon cta-icon-ticket" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
             <path d="M2.5 6.2a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v1.1a1.25 1.25 0 0 0 0 2.5V11a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1V9.8a1.25 1.25 0 0 0 0-2.5V6.2Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
             <path d="M8 6.7v3.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
@@ -30,7 +30,7 @@
         </a>
       </div>
 
-      <p class="hero-subcopy">27 June 2026 · Tournament from 1 PM · Fireside chat at 4 PM · Match kicks off at 5 PM</p>
+      <p class="hero-subcopy">11 July 2026 · Tournament from 1 PM · Fireside chat at 4 PM · Closing Party at 8 PM</p>
 
       <div class="support-row" aria-label="Event segments">
         <span class="support-label">Featuring</span>
